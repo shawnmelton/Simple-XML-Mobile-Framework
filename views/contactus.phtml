@@ -1,0 +1,66 @@
+<h1>Contact Us</h1>
+<table>
+	<?php if( $this->site->phone ) { ?>
+	<tr>
+		<td>Telephone:</td>
+		<td><a href="tel:<?php echo preg_replace('/\.|\-|\(|\)| /', '', $this->site->phone); ?>"><?php echo $this->site->phone; ?></a></td>
+	</tr>
+	<?php } ?>
+	<?php if( $this->site->fax ) { ?>
+	<tr>
+		<td>Fax:</td>
+		<td><?php echo $this->site->fax; ?></td>
+	</tr>
+	<?php } ?>
+	<?php if( $this->site->email ) { ?>
+	<tr>
+		<td>Email:</td>
+		<td><a href="mailto:<?php echo $this->site->email; ?>"><?php echo $this->site->email; ?></a></td>
+	</tr>
+	<?php } ?>
+</table>
+<form name="contact_form" method="<?php echo $this->site->getFormInfo('contact_form', 'method'); ?>" action="<?php echo $this->site->getFormInfo('contact_form', 'action'); ?>">
+	<ol><?php echo join(' ', $this->site->getFormInfo('contact_form', 'fields')); ?></ol>
+	<p>
+		<input type="hidden" name="fns" value="contact_form">
+		<input type="submit" name="submit_" value="Submit">
+	</p>
+</form>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript"><!-- 
+$(document).ready(function(){
+	var placeholder = "Required!";
+	var formElements = $("form ol input, form textarea, form select");
+	var emailRE = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+	var phoneRE = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+	
+	// Remove errors highlighted on fields.
+	var removePlaceholder = (function(){
+		if( $(this).val() == placeholder ) {
+			$(this).val("");
+		}
+		
+		$(this).removeClass("error");
+	});
+
+	// Validate the form submission against HTML5 elements.
+	$("form").submit(function(){
+		formElements.each(removePlaceholder);
+		formElements.each(function(){
+			if( $(this).attr("required") && $(this).val() == "" ) {
+				$(this).addClass("error");
+				$(this).val(placeholder);
+			} else if( $(this).is("input") && $(this).attr("type") == "email" && $(this).val() != "" && !$(this).val().match(emailRE) ) {
+				$(this).addClass("error");
+			} else if( $(this).is("input") && $(this).attr("type") == "phone"&& $(this).val() != "" && !$(this).val().match(phoneRE) ) {
+				$(this).addClass("error");
+			}
+		});
+		
+		
+		return ($("form .error").length == 0); // There aren't any errors on site.
+	});
+	
+	formElements.focus(removePlaceholder);
+});
+--></script>

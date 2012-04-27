@@ -1,0 +1,7 @@
+<ul data-role="listview" data-inset="true">
+<?php
+	$first = true;
+	foreach( $this->site->getLinks() as $name => $url ) { ?>
+	<li><a href="<?php echo $url; ?>" class="<?php echo strtolower(str_replace(' ', '-', $name)) . ($first ? ' first' : ''); ?>"<?php echo in_array($name, array('Find Us', 'Contact Us', 'Schedule an Appointment')) ? ' data-ajax="false"' : ''; ?>><span><?php echo $name; ?></span></a></li>
+<?php $first = false; } ?>
+</ul>

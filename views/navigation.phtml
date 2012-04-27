@@ -1,0 +1,7 @@
+<nav>
+<?php
+	$first = true;
+	foreach( $this->site->getLinks() as $name => $url ) { ?>
+	<a href="<?php echo $url; ?>" class="<?php echo strtolower(str_replace(' ', '-', $name)) . ($first ? ' first' : ''); ?>"><span><?php echo $name; ?></span></a>
+<?php $first = false; } ?>
+</nav>

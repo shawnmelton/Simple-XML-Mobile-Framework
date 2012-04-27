@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<name>jQuery Mobile Example</name>
+	<url>http://www.example.com/</url>
+	<domain>example.com</domain>
+	<emailname>Example</emailname>
+	
+	<!-- Contact Information -->
+	<phone><![CDATA[757.800.2000]]></phone>
+	
+	<!-- Meta Information -->
+	<metakeywords><![CDATA[air conditioning repair, air conditioning service, hvac hampton roads, heating repair, heating service]]></metakeywords>
+	<metadescription><![CDATA[HVAC Yorktown, HVAC Hampton, HVAC Newport News,  heating and air conditioning, air conditioning, air conditioning service Yorktown, air conditioning repair Yorktown , Hampton air conditioning service , Hampton  air conditioning repair,  air conditioning service Newport news ,  air conditioning repair  Newport news,  air conditioning repair Williamsburg, air conditioning service Williamsburg,  Hampton roads air conditioning repair,  central air conditioning Hampton road]]></metadescription>
+	
+	<!-- Main Navigation Links -->
+	<nav>
+		<link title="Home">/</link>
+		<link title="About Us">/about-us</link>
+		<link title="Find Us">/find-us</link>
+		<link title="Schedule an Appointment">/schedule-appointment</link>
+		<link title="Contact Us">/contact-us</link>
+	</nav>
+	
+	<!-- The link back to the full site. -->
+	<fullsiteurl>http://www.example.com/#fs</fullsiteurl>
+	
+	<pagenotfoundcontent><![CDATA[
+	<p>
+		We were unable to find the page that you requested.<br><br>Please click the "View Full Site" link at the bottom of the page to visit the full jQuery Mobile Example site.
+	</p>
+	]]></pagenotfoundcontent>
+	
+	<!-- Contact Form -->
+	<form name="contact_form" method="post" action="/mail" recipients="info@example.com">
+		<field name="full_name" type="text" required="true" label="Full Name:" />
+		<field name="address" type="text" required="true" label="Address:" />
+		<field name="city" type="text" required="true" label="City:" />
+		<field name="state" type="text" required="true" label="State:" />
+		<field name="zip_code" type="text" required="true" label="Zip Code:" />
+		<field name="email_address" type="text" required="false" label="E-mail Address:" />
+		<field name="phone_number" type="text" required="false" label="Phone Number:" />
+		<field name="reason_for_inquiry" type="select" required="false" label="Reason for Inquiry:">
+			<option value="Estimate" />
+			<option value="General Inquiry" />
+			<option value="Technical Question" />
+			<option value="Other" />
+		</field>
+		<field name="message" type="textarea" required="true" label="Message:" />
+	</form>
+	
+	<!-- Schedule Appointment Form -->
+	<form name="schedule_appointment_form" method="post" action="/mail" recipients="info@example.com">
+		<field name="full_name" type="text" required="true" label="Full Name:" />
+		<field name="email_address" type="text" required="true" label="E-mail Address:" />
+		<field name="service_type" type="select" required="true" label="Service Type:">
+			<option value="Air Conditioning Repair" />
+			<option value="Heating Repair" />
+			<option value="Duct Cleaning" />
+			<option value="High Efficiency Water Heating" />
+			<option value="Air Quality" />
+			<option value="Geothermal" />
+			<option value="Home Energy Check-Up" />
+			<option value="System Upgrades or Replacements" />
+			<option value="Sign up for Smart Care Plan Maintenance" />
+		</field>
+		<field name="request_a_date" type="date" required="true" label="Request a Date:" />
+		<field name="comments_special_instructions" type="textarea" required="true" label="Comments/Special Instructions:" />
+	</form>
+</site>

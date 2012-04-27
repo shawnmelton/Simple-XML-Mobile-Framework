@@ -1,0 +1,20 @@
+<form name="schedule_appointment_form" method="<?php echo $this->site->getFormInfo('schedule_appointment_form', 'method'); ?>" action="<?php echo $this->site->getFormInfo('schedule_appointment_form', 'action'); ?>">
+	<ol><?php echo join(' ', $this->site->getFormInfo('schedule_appointment_form', 'fields')); ?></ol>
+	<p>
+		<input type="hidden" name="fns" value="schedule_appointment_form">
+		<input type="submit" name="submit_save" value="Submit">
+	</p>
+</form>
+<script type="text/javascript" src="/js/validate.jquery.js"></script>
+<script type="text/javascript"><!--
+var submissionCallback = (function(){
+	document.location.href = "/thank-you";
+});
+
+$(document).ready(function(){
+	$("form").validate({
+		ajax: true,
+		ajaxCallback: "submissionCallback"
+	});
+});
+--></script>

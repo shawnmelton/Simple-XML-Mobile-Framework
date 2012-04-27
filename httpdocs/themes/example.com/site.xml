@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<name>Example Site</name>
+	<url>http://www.example.com/</url>
+	
+	<!-- Contact Information -->
+	<phone><![CDATA[757.555.4444]]></phone>
+	<fax><![CDATA[757.888.9999]]></fax>
+	<email><![CDATA[info@example.com]]></email>
+	
+	<!-- Meta Information -->
+	<metakeywords><![CDATA[example,mobile,site]]></metakeywords>
+	<metadescription><![CDATA[This is an example mobile site show how the site would potentially be set up.]]></metadescription>
+	
+	<!-- Main Navigation Links -->
+	<nav>
+		<link title="Home">/</link>
+		<link title="About Us">/about-us</link>
+		<link title="Find Us">/find-us</link>
+		<link title="Contact Us">/contact-us</link>
+	</nav>
+	
+	<!-- The link back to the full site. -->
+	<fullsiteurl>http://www.example.com/?full_site=1</fullsiteurl>
+	
+	<!-- Page Content -->
+	<homepagecontent><![CDATA[
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut purus felis. Mauris at lectus et nibh scelerisque aliquet. Phasellus cursus dignissim vestibulum.
+		Vivamus sed nisi ipsum. Praesent faucibus, velit at ultrices porttitor, lectus leo vestibulum est, non ultricies turpis libero sed orci. Aenean ut nisl non magna blandit posuere. 
+		Etiam odio massa, interdum non blandit sed, aliquam id nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Aenean porttitor, libero in sodales 
+		lacinia, felis quam laoreet neque, non porttitor urna magna vel leo.
+	</p>
+	]]></homepagecontent>
+	<aboutuscontent><![CDATA[
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut purus felis. Mauris at lectus et nibh scelerisque aliquet. Phasellus cursus dignissim vestibulum.
+		Vivamus sed nisi ipsum. Praesent faucibus, velit at ultrices porttitor, lectus leo vestibulum est, non ultricies turpis libero sed orci. Aenean ut nisl non magna blandit posuere. 
+		Etiam odio massa, interdum non blandit sed, aliquam id nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Aenean porttitor, libero in sodales 
+		lacinia, felis quam laoreet neque, non porttitor urna magna vel leo.
+	</p>
+	]]></aboutuscontent>
+	<finduscontent><![CDATA[
+	<p>
+		<a href="http://maps.google.com/?q=100+Main+Street+Norfolk+VA+23508" class="non-link" id="location-link"><strong>Company, Inc.</strong><br>
+		100 Main Street<br>
+		Norfolk, VA 23508</a>
+	</p>
+	]]></finduscontent>
+	<pagenotfoundcontent><![CDATA[
+	<p>
+		We were unable to find the page that you requested.<br><br>Please click the "View Full Site" link at the bottom of the page to visit the full Example.com website.
+	</p>
+	]]></pagenotfoundcontent>
+	
+	<!-- Contact Form -->
+	<form name="example_form" method="post" action="/">
+		<field name="full_name" type="text" required="true" label="Full Name:"></field>
+		<field name="email_address" type="email" required="true" label="E-mail Address:"></field>
+		<field name="phone_number" type="phone" required="false" label="Phone Number:"></field>
+		<field name="message" type="textarea" required="true" label="Message:"></field>
+	</form>
+</site>
